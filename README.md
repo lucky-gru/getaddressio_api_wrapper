@@ -5,7 +5,7 @@ Please use this if you want to fix the issue,
 
 ## Requirements
 
-1. Please change .env.sample to .env
+1. Please change .env.example to .env
 2. You need to put a correct getaddress.io API key to .env file
 
 ## Install

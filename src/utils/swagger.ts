@@ -12,7 +12,7 @@ const options: swaggerJsdoc.Options = {
       version,
     },
   },
-  apis: ["./src/controllers/auth.controller.ts", "./src/schemas/openapi.schema.ts"],
+  apis: ["./src/controllers/address.controller.ts", "./src/schemas/address.schema.ts"],
 };
 
 const swaggerSpec = swaggerJsdoc(options);

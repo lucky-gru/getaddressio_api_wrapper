@@ -13,11 +13,18 @@ class AddressController implements Controller {
   private initializeRoutes() {
     /**
      * @openapi
-     * '/find':
+     * /api/address/find/{postcode}:
      *  get:
      *     tags:
      *     - FindAddressByPostcode
      *     summary: Find addresses by postcode
+     *     parameters:
+     *       - in: path
+     *         name: postcode
+     *         schema:
+     *           type: string
+     *         required: true
+     *         description: Postcode
      *     responses:
      *      200:
      *        description: Success

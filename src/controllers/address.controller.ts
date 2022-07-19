@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction, Router } from "express";
+import { AxiosError } from "axios";
+import HttpException from "../exceptions/HttpException";
 import Controller from "../interfaces/controller.interface";
 import AddressService from "../services/address.service";
 class AddressController implements Controller {
@@ -51,7 +53,7 @@ class AddressController implements Controller {
       const addresses = await this.addressService.find(postcode);
       response.send(addresses);
     } catch (error) {
-      next(error);
+      next(new HttpException(error.response.status, error.code));
     }
   };
 }

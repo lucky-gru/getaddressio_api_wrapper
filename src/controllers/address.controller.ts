@@ -26,14 +26,18 @@ class AddressController implements Controller {
      *         schema:
      *           type: string
      *         required: true
-     *         description: Postcode
+     *         description: Postcode ex. nn13er
      *     responses:
      *      200:
      *        description: Success
      *        content:
      *          application/json:
      *            schema:
-     *              $ref: '#/components/schemas/FindAddressResponse'
+     *              addresses:
+     *                schedma:
+     *                  $ref: '#/components/schemas/FindAddressResponse'
+     *              status:
+     *                type: number
      *      400:
      *        description: Bad request
      *      404:
@@ -51,7 +55,10 @@ class AddressController implements Controller {
     const postcode = request.params.postcode;
     try {
       const addresses = await this.addressService.find(postcode);
-      response.send(addresses);
+      response.send({
+        status: 200,
+        addresses,
+      });
     } catch (error) {
       next(new HttpException(error.response.status, error.code));
     }

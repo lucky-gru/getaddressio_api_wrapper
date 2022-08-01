@@ -1,13 +1,13 @@
 {
   "name": "getaddressio_api_wrapper",
   "version": "0.0.0",
-  "main": "src/server.ts",
+  "main": "src/server.js",
   "author": "lucky-gru",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
-    "start": "node build/src/server.js",
+    "start": "node ./dist/src/server.js",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "dependencies": {

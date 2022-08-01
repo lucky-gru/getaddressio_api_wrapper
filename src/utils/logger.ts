@@ -1,5 +1,5 @@
 import logger from "pino";
-import * as dayjs from "dayjs"
+import dayjs from "dayjs"
 
 const log = logger({
     prettyPrint: true,

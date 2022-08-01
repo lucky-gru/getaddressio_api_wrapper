@@ -27,7 +27,8 @@
     "pino": "^7.0.2",
     "pino-pretty": "^7.1.0",
     "swagger-jsdoc": "^6.2.1",
-    "zod": "^3.9.8"
+    "zod": "^3.9.8",
+    "swagger-ui-express": "^4.4.0",
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.1",
@@ -49,7 +50,6 @@
     "mocha": "^10.0.0",
     "prettier": "^2.6.2",
     "sinon": "^14.0.0",
-    "swagger-ui-express": "^4.4.0",
     "ts-node": "^10.8.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.4"
